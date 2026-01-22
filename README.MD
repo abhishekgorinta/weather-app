@@ -70,12 +70,12 @@ git clone https://github.com/abhishekgorinta/weather-app.git
    
 ```
 
-👨‍💻 Author
+## 👨‍💻 Author:
 
 Developed by Abhishek Gorinta
 
 
-License
+## License:
 
 This project is free to use and modify for learning purposes.
 
