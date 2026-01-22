@@ -72,7 +72,7 @@ git clone https://github.com/abhishekgorinta/weather-app.git
 
 👨‍💻 Author
 
-##Developed by Abhishek Gorinta
+Developed by Abhishek Gorinta
 
 
 License
