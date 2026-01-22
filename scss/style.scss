@@ -1,0 +1,225 @@
+$primary-color: #031a2e;
+$secondary-color: black;
+$text-color: black;
+$white: #ffffff;
+$glass-bg: rgba(250, 249, 249, 0.418);
+$video-z: -1;
+
+$radius-sm: 5px;
+$radius-md: 10px;
+
+$padding-sm: 10px;
+$padding-md: 20px;
+
+$font-lg: 70px;
+$icon-size: 22px;
+
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin glass-effect {
+    background: $glass-bg;
+    backdrop-filter: blur(5px);
+    border: 1px solid $white;
+    border-radius: $radius-md;
+}
+
+@mixin button-style {
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    outline: none;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:hover {
+        background-color: rgb(25, 75, 150);
+        color: $white;
+    }
+}
+
+@mixin video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: $video-z;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $text-color;
+}
+
+body {
+    height: 100vh;
+    @include flex-center;
+}
+
+h1 {
+    font-size: $font-lg;
+    color: $text-color;
+    text-align: center;
+    text-shadow: 3px 2px $white;
+}
+
+h2 {
+    color: $primary-color;
+    text-align: left;
+    margin-bottom: $padding-md;
+}
+
+#err {
+    text-align: center;
+    color: red;
+}
+
+p {
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: $padding-md;
+}
+
+
+.bg-video {
+    @include video-bg;
+}
+
+.content {
+    width: 500px;
+    height: 500px;
+    padding: $padding-md;
+    position: relative;
+    z-index: 1;
+    color: $white;
+    @include glass-effect;
+
+    .input-s {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        .s {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            padding: $padding-sm;
+            background-color: $white;
+            border-radius: $radius-md;
+
+            input[type="text"] {
+                width: 100%;
+                border: none;
+                outline: none;
+            }
+        }
+
+        button {
+            @include button-style;
+        }
+    }
+
+    .output-s {
+        margin-top: 20px;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+
+            li {
+                list-style: none;
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+        }
+    }
+}
+
+#weatherIcon {
+    font-size: $icon-size;
+    margin-right: 6px;
+    color: $primary-color;
+}
+
+@media (max-width:545px) {
+    .content {
+        width: 400px;
+        height: 500px;
+        padding: $padding-md;
+        position: relative;
+        z-index: 1;
+        color: $white;
+        @include glass-effect;
+
+        .input-s {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+
+            .s {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 100%;
+                padding: $padding-sm;
+                background-color: $white;
+                border-radius: $radius-md;
+
+
+            }
+
+
+        }
+
+
+
+    }
+}
+
+@media (max-width:420px) {
+    .content {
+        width: 300px;
+        height: 550px;
+
+        .con {
+            .output-s {
+                ul {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                }
+
+                li {
+                    text-align: left;
+                    font-size: 20px;
+                    font-weight: bold;
+
+                }
+            }
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        .input-s {
+            flex-direction: column;
+        }
+
+
+    }
+}
