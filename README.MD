@@ -62,7 +62,7 @@ const API_KEY = "YOUR_API_KEY_HERE";
 
 1. Clone the repository  
 ```bash
-git clone https://github.com/abhishekgorinta/to-do-list.git
+git clone https://github.com/abhishekgorinta/weather-app.git
 
 
 2. Open index.html in your browser
