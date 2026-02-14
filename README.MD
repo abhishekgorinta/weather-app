@@ -10,7 +10,7 @@ This app helps users to know:
 - Location name
 
 ---
-## 📸 Screenshots
+## 📸 Screenshot
 ![main Page](asserts/main.png)
 
 ---
