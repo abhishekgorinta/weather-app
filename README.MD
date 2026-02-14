@@ -10,7 +10,10 @@ This app helps users to know:
 - Location name
 
 ---
+## 📸 Screenshots
+![main Page](asserts/main.png)
 
+---
 ## 🚀 Features
 
 - 🔍 Search weather by city name  
@@ -56,19 +59,17 @@ weather-app/
 
 ```js
 const API_KEY = "YOUR_API_KEY_HERE";
-
+```
 
 ## ⚙️ How to Run the Project
 
 1. Clone the repository  
 ```bash
 git clone https://github.com/abhishekgorinta/weather-app.git
-
+```
 
 2. Open index.html in your browser
    OR use Live Server in VS Code.
-   
-```
 
 ## 👨‍💻 Author:
 
