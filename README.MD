@@ -8,7 +8,10 @@ This app helps users to know:
 - Humidity
 - Wind speed
 - Location name
-
+## View live
+```
+https://gabhishek-weather-app.netlify.app/
+```
 ---
 ## 📸 Screenshot
 ![main Page](asserts/main.png)
